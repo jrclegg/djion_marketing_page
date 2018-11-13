@@ -1,0 +1,93 @@
+
+{% extends "standard_layout.html" %}
+
+{% block content %}
+
+<div class="page-block">
+    {{ content_block('feature') }}
+
+    {% include 'component/nav.html' %}
+
+    <div class="summary-block">
+        <div class="summary-row">
+            <h1 class="dijon-title">Dijon</h1>
+            <p class="dijon-description">Dijon is a software as a service platform that allows National and International non-profits to rapidly create National, Regional or Global digital fundraising or engagement campaigns. It is a major update to a previous system called Mustard that has powered campaigns in the past 4 years for organisations such as: UNHCR, WWF, IRC, Amnesty, UNRWA, Flora & Fauna International, BirdLife International, The National Trust (UK) and The Liberal Party (Canada).</p>
+        </div>
+    </div>
+    <div class="main-content-block">
+        <h2 class="features-title">Key features</h2>
+        <div class="row">
+            <div class="feature-column large-6 medium-6 small-12">
+                <h3>Data Driven Campaigns</h3>
+                <p>Dijon will support A/B testing and enable data driven campaigns by recording events such as users filling in each form element, pressing buttons and how far down the page the user scrolls. The analytics data collected will be available in the administration system of Dijon, enabling site administrators to make informed data-led decisions on changes to pages which will result in increased conversions.</p>
+                <h3>New Architecture</h3>
+                <p>The Dijon platform has been architected solely to perform the task of lead generation, petition and donation forms, allowing it to process millions of donations or leads per minute. The platform will automatically scale as traffic comes in meaning that global disasters, surprise celebrity tweets or TV mentions will cause no problems.</p>
+                <p>Because the creation of site hosting resource is automated, we can deploy the Dijon platform anywhere in the world decreasing the time to first byte and responsiveness to the user as they begin our highly optimised donation or sign up journey. Of all the factors governing increasing conversion rates, speed is by far the most significant one.</p>
+                <p>To further improve user experience, Dijon is also available in multiple regions. It is possible to have your site running simultaneously in Europe, America, Asia and Australia.</p>
+                <h3>User-Friendly CMS</h3>
+                <p>Dijon's administration system concentrates on the task at hand and has a dashboard that allows users to see exactly how their campaign is doing. The number of leads generated and amount donated will be displayed when users first log in and it is possible to filter this by campaign. Regional or National users will see totals from their region or country. Users will be also able to produce reports of the analytics data collected.</p>
+                <p>It is easy to find content to edit, and new campaigns are simple to setup using Dijon's built in editor.</p>
+                <h3>Customisable Templates</h3>
+                <p>Users can create custom templates based on location. An entire campaign can have a single template, or a different template can be configured per country or region allowing the analytics data collected from users in various locations to inform changes to the campaign as it progresses.</p>
+                <p>Organisations that have their own internal web design and development teams will be able to customise their campaigns and templates themselves and automatically push their changes to both a staging and production environment 24/7. This will allow new campaigns to be created entirely by the organisation over shut-down periods like Christmas or other regional holidays.</p>
+            </div>
+            <div class="feature-column large-6 medium-6 small-12">
+                <h3>Languages & Currencies</h3>
+                <p>Dijon supports multiple languages and currencies. Campaigns will show a customisable default currency depending on user location and will default to the language of the user's browser when a translation is available. Otherwise, a configurable default language will be displayed. Entire blocks of content or pieces of text can be translated which allows maximum flexibility.</p>
+                <h3>One-off & Monthly Donations</h3>
+                <p>The ability to accept one-off or monthly donations is baked into Dijon. Site creators can use the supplied examples or their favourite Javascript library to create easy to use interfaces for donations that maximise conversions.</p>
+                <h3>Petitions & Lead Generation Forms</h3>
+                <p>Lead generation and petitions are supported. Dijon also includes the ability to collect further information from the user once the initial submission is accepted. It is also possible to accept donations after the lead.</p>
+                <h3>Totalizer & Activity Feeds</h3>
+                <p>Dijon provides totalizer and activity feed components enabling your page to display a count of donations, leads, or petition signings in a flexible and customisable way. You can visualise the progress of your campaign however you like. The only limit is your imagination</p>
+                <h3>Content Management and testing</h3>
+                <p>Dijon operates on a block system so content and any features deployed on your page, can be easily swapped in or out to test different hypothesis you may have around optimising conversions. The ability to automatically copy these blocks of content from your staging site to the live site is also included, easing the transition from stakeholder approval to production.</p>
+                <h3>Data download</h3>
+                <p>Clients can choose to store the data in the Cloud, manually export to a local CRM, via FTP secure connection or we can build out an automated connector to your database.</p>
+                <h3>Geo-IP redirects</h3>
+                <p>Typically we set up the pages on your domain, i.e. donate.yourdomain.org. We can then apply redirections to different language/currency versions of the page based on the campaign needs. Custom URLs can override the default language/currency URLs so you can use /uk instead of /gb-en if desired.</p>
+            </div>
+        </div>
+        <div class="section-contact">
+            <div class="contact-title">
+                <h3>Get Started with Dijon today</h3>
+            </div>
+            <div class="columns large-10 medium-8 small-12 form-block">
+                <!-- on submit validate the form -->
+                <form action="" onsubmit="return false;" id="featureForm" name="featureForm" method="POST"
+                      class="hf_leadgen_form contact-form">
+                    <div>
+                        <input type="hidden" name="form_name" value="feature_page_lead_gen"/>
+                        <input type="hidden" name="form_type" value="info_signup"/>
+                        <!-- onblur executes JavaScript when the user leaves an input field -->
+                        <input name="name" class="name hf_nameValidation validationOkay validationError" placeholder="Name" type="text">
+                        <span class="hf_nameMessage nameError ">You can only use alphabetic characters, hyphens and apostrophes, no spaces</span>
+                        <!-- onblur executes JavaScript when the user leaves an input field -->
+                        <input name="email" class="email hf_emailValidation validationOkay validationError" placeholder="Email address">
+                        <span class="hf_emailMessage emailError">You must enter a valid email address</span>
+                        <textarea name="message" placeholder="Tell us more about your needs"></textarea>
+                        <form action="?" method="POST">
+                            <div class="g-recaptcha" data-sitekey="6LfsIkAUAAAAAOqSmisMIxd-qXDCdW9SHQdlsoEK"></div>
+                            <span class="hf_captchaMessage captchaError captchaOkay">Please verify you are not a robot by clicking on the recaptcha </span>
+                            <input type="submit" class="submit btn feature btn-primary btn-lg btn-block text-center">
+                        </form>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    {% include 'component/footer.html' %}
+
+    {% include 'component/copyright.html' %}
+</div>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="/js_src/marketing.js"></script>
+
+
+{% endblock %}
+
+{% block page_javascript %}
+<!-- Put page specific Javascript in here -->
+
+{% endblock %}
